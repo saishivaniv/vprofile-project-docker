@@ -1,6 +1,6 @@
 FROM maven:3.9.9-eclipse-temurin-21-jammy AS build_image
 RUN git clone https://github.com/saishivaniv/vprofile-project-docker.git
-RUN cd vprofile-project && git checkout docker && mvn install
+RUN cd vprofile-project-docker && git checkout docker && mvn install
 
 FROM tomcat:10-jdk21
 
